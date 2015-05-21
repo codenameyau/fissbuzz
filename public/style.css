@@ -1,0 +1,50 @@
+body {
+  width: 80%;
+  margin: 100px auto;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+div {
+  counter-increment: fizzbuzz;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  height: 70px;
+  width: 70px;
+  background: rgb(193, 250, 228);
+  color: rgb(30, 30, 30);
+}
+
+div::after {
+  content: counter(fizzbuzz);
+}
+
+div:nth-child(3n) {
+  background: rgb(124, 245, 104);
+}
+
+div:nth-child(3n)::after {
+  content: 'Fizz';
+}
+
+div:nth-child(5n) {
+  background: rgb(253, 81, 81);
+}
+
+div:nth-child(5n)::after {
+  content: 'Buzz';
+}
+
+div:nth-child(15n) {
+  background: rgb(255, 200, 100);
+}
+
+div:nth-child(15n)::after {
+  content: 'FizzBuzz';
+}
+
+div:hover::after {
+  content: counter(fizzbuzz);
+}
